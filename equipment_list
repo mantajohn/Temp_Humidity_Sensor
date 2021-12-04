@@ -1,0 +1,13 @@
+List of equipment
+
+Raspberry pi pico (because this is a simple project using minimal GPIO pins any microprocessor using an rp2040 capable of running micropython would work)
+DHT 11 Temperature and Humidity Sensor
+SSD1306 Oled Display (0.96" 128x64)
+A simple switch
+4 LED's (you choose the colour)
+4 resistors (I used 200's but use anything suitable for an LED)
+Some wire
+A small piece of protoboard
+A small cardboard box (I recycled a small one that had components had been posted in and sprayed it red)
+
+For power supply I used a 9V snap connector and battery connected to a cheap DC step down board and then hacked (butchered) an old micro usb cable.
