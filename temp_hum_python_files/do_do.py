@@ -4,9 +4,11 @@ from ssd1306 import SSD1306_I2C
 import utime as time
 from dht import DHT11, InvalidChecksum
 import sys
+
 #define oled i2c pins and initialise
 i2c = I2C(0, scl=Pin(1), sda=Pin(0), freq=400000)
 oled = SSD1306_I2C(128, 64, i2c)
+
 #define leds
 led = machine.Pin(25, machine.Pin.OUT)
 led.value(1)
@@ -14,6 +16,7 @@ led1 = machine.Pin(2, machine.Pin.OUT)
 led2 = machine.Pin(3, machine.Pin.OUT)
 led3 = machine.Pin(4, machine.Pin.OUT)
 led4 = machine.Pin(5, machine.Pin.OUT)
+
 #welcome message
 led1.value(0)
 led2.value(0)
@@ -71,9 +74,10 @@ led3.value(0)
 led4.value(0)
 time.sleep(0.5)
 
-
+#DHT11
 pin = Pin(28, Pin.OUT, Pin.PULL_DOWN)
 sensor = DHT11(pin)
+
 # loop
 while True:
     led.value(1)
@@ -83,6 +87,7 @@ while True:
     led4.value(1)
     time.sleep(2)
     led.value(0)
+    
     # Clear the oled display in case it has junk on it.
     oled.fill(0)       
     
